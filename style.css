@@ -1,0 +1,274 @@
+	.container {
+		width: 70%;
+		margin: auto;
+		text-align: center;
+	}
+
+	.dice {
+		text-align: center;
+		display: inline-block;
+		margin: 5px;
+	}
+
+	body {
+		background-color: #042f4b;
+		margin: 0;
+	}
+
+	h1 {
+		margin: 30px;
+		font-family:"Indie Flower", cursive;
+		text-shadow: 5px 0 #232931;
+		font-size: 4rem;
+		color:#4ecca3;
+		text-align: center;
+	}
+
+
+    h4 {
+		background: #4ecca3;
+		font-family: "Indie Flower", cursive;
+		border-radius: 7px;
+		color: #ffff;
+		font-size: 30px;
+		padding: 16px 25px 16px 25px;
+		text-decoration: none;
+	}
+
+    h5 {
+		background: #4ecca3;
+		font-family: "Indie Flower", cursive;
+		border-radius: 7px;
+		color: #ffff;
+		font-size: 30px;
+		padding: 16px 25px 16px 25px;
+		text-decoration: none;
+
+    }
+
+
+	p {
+		font-size: 1.1rem;
+		color: #4ecca3;
+		font-family: "Indie Flower", cursive;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.bottom {
+		padding-top: 30px;
+	}
+
+	.butn {
+		background: #4ecca3;
+		font-family: "Indie Flower", cursive;
+		border-radius: 7px;
+		color: #ffff;
+		font-size: 30px;
+		padding: 16px 25px 16px 25px;
+		text-decoration: none;
+	}
+
+	.butn:hover {
+		background: #232931;
+		text-decoration: none;
+	}
+    html {
+        font-family: Sans-Serif;
+        text-align: center;
+            
+      }
+      
+    
+    /*This next set of code styles the Players' names (learned from class).*/
+    #Player_House {
+        display:inline-block;
+        background-color: pink;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+        
+      }
+    
+    #Player_1 {
+        display:inline-block;
+        background-color: pink;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+    
+      }
+    
+    #Player_2 {
+            display:inline-block;
+            background-color: pink;
+            border: 2px solid gold;
+            color:black;
+            margin: 20px;
+            padding: 20px;
+            font-weight: bold;
+            
+      }
+        
+    #Player_3 {
+        display:inline-block;
+        background-color: pink;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+        
+      }
+    
+    #Player_4 {
+        display:inline-block;
+        background-color: pink;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+        
+      }
+    
+    #Player_5 {
+        display:inline-block;
+        background-color: pink;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+        
+      }
+    
+    /*This next set of code styles the Players' wallet (learned from class).*/
+    
+    #Wallet_House {
+        display:inline-block;
+        background-color: brown;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+        
+      }
+    
+      #Wallet_1 {
+        display:inline-block;
+        background-color: brown;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+    
+      }
+    
+     #Wallet_2 {
+            display:inline-block;
+            background-color: brown;
+            border: 2px solid gold;
+            color:black;
+            margin: 20px;
+            padding: 20px;
+            font-weight: bold;
+            
+          }
+        
+           
+      #Wallet_3 {
+        display:inline-block;
+        background-color: brown;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+        
+      }
+    
+      #Wallet_4 {
+        display:inline-block;
+        background-color: brown;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+        
+      }
+      #Wallet_5 {
+        display:inline-block;
+        background-color: brown;
+        border: 2px solid gold;
+        color:black;
+        margin: 20px;
+        padding: 20px;
+        font-weight: bold;
+        
+      }
+    
+     
+      /* This code centers the dice image on the main page - from w3schools*/
+      img {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 75%
+      }
+    
+       
+    
+      .dropbtn {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      
+    
+      h1 {
+        background-color: rgb(238, 189, 197);
+        font-style: italic;
+      }
+    
+    
+      body {
+        background-color:white(234, 218, 218)
+      }
+      
+      .container {
+        display:inline-block;
+        text-align: center;
+        width: 400px;
+        margin:auto;
+      }
+      
+   
+      
+      /* Styling for Dropdown Button/*
+      /example from https://www.w3schools.com/howto/howto_js_dropdown.asp*/
+    
+      
+      
+      
+      
+      
+      a {
+        opacity: .5;
+        text-decoration: none;
+        color: salmon;
+      }
