@@ -5,9 +5,9 @@
 	}
 
 	.dice {
-		text-align: center;
+		text-align: left;
 		display: inline-block;
-		margin: 5px;
+		margin: 4px;
 	}
 
 	body {
@@ -54,7 +54,7 @@
 	}
 
 	img {
-		width: 100%;
+		width: 80%;
 	}
 
 	.bottom {
@@ -253,7 +253,7 @@
       .container {
         display:inline-block;
         text-align: center;
-        width: 400px;
+        width: 200px;
         margin:auto;
       }
       

@@ -22,7 +22,7 @@
         document.querySelector("p.Player5").innerHTML = player5;
 	}
 	
-	// Function to roll the dice from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
+	// Function to roll the dice patterned from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
 	function rollTheDice() {
 		setTimeout(function () {
 			var randomNumber1 = Math.floor(Math.random() * 6) + 1;
@@ -31,7 +31,17 @@
             var randomNumber4 = Math.floor(Math.random() * 6) + 1;
             var randomNumber5 = Math.floor(Math.random() * 6) + 1;
             var randomNumber6 = Math.floor(Math.random() * 6) + 1;
+            var randomNumber7 = Math.floor(Math.random() * 6) + 1;
+            var randomNumber8 = Math.floor(Math.random() * 6) + 1;
+            var randomNumber9 = Math.floor(Math.random() * 6) + 1;
+            var randomNumber10 = Math.floor(Math.random() * 6) + 1;
 
+            // adds the 2 dice together. 
+            let roll_1= randomNumber1+randomNumber6
+            let roll_2 = randomNumber2+randomNumber7
+            let roll_3 = randomNumber3+randomNumber8
+            let roll_4 = randomNumber4+randomNumber9
+            let roll_5 = randomNumber5+randomNumber10
 
 			document.querySelector(".img1").setAttribute("src",
                 "dice" + randomNumber1 +".png");
@@ -47,6 +57,17 @@
 
             document.querySelector(".img5").setAttribute("src",
 				"dice" + randomNumber5 + ".png");    
+            document.querySelector(".img6").setAttribute("src",
+				"dice" + randomNumber6 + ".png"); 
+            document.querySelector(".img7").setAttribute("src",
+				"dice" + randomNumber7 + ".png"); 
+            document.querySelector(".img8").setAttribute("src",
+				"dice" + randomNumber8 + ".png"); 
+            document.querySelector(".img9").setAttribute("src",
+				"dice" + randomNumber9 + ".png"); 
+            document.querySelector(".img10").setAttribute("src",
+				"dice" + randomNumber10 + ".png"); 
+            
 
 
 			if (randomNumber1 === randomNumber2) {
@@ -65,7 +86,7 @@
 		}, 2500);
     }
     //For Loop returns highest roll - from PPT Slide js-2-Loops
-      let results = [randomNumber1, randomNumber2, randomNumber3, randomNumber4, randomNumber5]
+      let results = [roll_1, roll_2, roll_3, roll_4, roll_5]
       let highestRoll=0
 
       for (let i=0; i<results.length; i++){
