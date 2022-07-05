@@ -22,8 +22,22 @@
 		font-size: 4rem;
 		color:#4ecca3;
 		text-align: center;
+        background-color: rgb(238, 189, 197);
+        font-style: italic;
+        font-size:45px
 	}
+    
 
+      h2 {
+        margin: 30px;
+		font-family:"Indie Flower", cursive;
+		text-shadow: 5px 0 #232931;
+		color:#4ecca3;
+		text-align: center;
+        font-style: italic;
+        font-size:30px
+        
+      }
 
     h4 {
 		background: #4ecca3;
@@ -226,8 +240,7 @@
         width: 75%
       }
     
-       
-    
+          
       .dropbtn {
         background-color: #4CAF50; /* Green */
         border: none;
@@ -243,6 +256,12 @@
       h1 {
         background-color: rgb(238, 189, 197);
         font-style: italic;
+        font-size:45px
+      }
+
+      h2 {
+        font-style: italic;
+        font-size:45px
       }
     
     
