@@ -31,11 +31,19 @@
     let roll_5
     let getLargestNumber
     let currRound =0
+
+    
+//Players determine number of rounds they want to play. 
+//Patterned after stackoverflow at the below link:
+// https://stackoverflow.com/questions/61625548/i-have-a-counter-to-track-the-number-or-rounds-but-i-cannot-figure-out-how-to-e
+    
+    let numOfRounds = prompt('How many rounds should we play?',11);
+    let numRounds = (numOfRounds !=0) ? numOfRounds : 11;
     
 
-
-	// Function to change the player name - patterned after code from 
-    //https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
+    
+// Function to change the player name - patterned after code from 
+//https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
     
 	function editNames() {
 		player1 = prompt("Change Player1 name");
@@ -51,34 +59,22 @@
         document.querySelector("p.Player5").innerHTML = player5;
 
 	}
-    //Begin Play
-    function beginPLay() {
-        //How many rounds do you want to play?
-        
-            
-    }
+
 // Players place your bets! 
     function placeBets() {
-		bet_1 = prompt("(player1)"+" "+ "What's your bet?").innerHTML=bet_1;
-		bet_2 = prompt("Change player2 name");
-        bet_3 = prompt("Change Player3 name");
-        bet_4 = prompt("Change Player4 name");
-        bet_5 = prompt("Change Player5 name");
+		bet_1 = prompt("player1"+" "+ "What's your bet?").innerHTML=bet_1;
+		bet_2 = prompt("player2"+" "+ "What's your bet?").innerHTML=bet_2;
+        bet_3 = prompt("player3"+" "+ "What's your bet?").innerHTML=bet_3;
+        bet_4 = prompt("player4"+" "+ "What's your bet?").innerHTML=bet_4;
+        bet_5 = prompt("player5"+" "+ "What's your bet?").innerHTML=bet_5;
 
-		document.querySelector("p.bet_1").innerHTML = bet_1;
-		document.querySelector("p.bet_2").innerHTML = bet_2;
-        document.querySelector("p.bet_3").innerHTML = bet_3;
-        document.querySelector("p.bet_4").innerHTML = bet_4;
-        document.querySelector("p.bet_5").innerHTML = bet_5;
+		document.querySelector("b.bet_1").innerHTML = bet_1;
+		document.querySelector("b.bet_2").innerHTML = bet_2;
+        document.querySelector("b.bet_3").innerHTML = bet_3;
+        document.querySelector("b.bet_4").innerHTML = bet_4;
+        document.querySelector("b.bet_5").innerHTML = bet_5;
 	}
-    //Keep track of the number of rounds per stack overflow
-    https://stackoverflow.com/questions/61625548/i-have-a-counter-to-track-the-number-or-rounds-but-i-cannot-figure-out-how-to-e
-
-    //let numOfRounds = prompt('How many rounds do you want to play?',11);
-    //let numRounds = (numOfRounds != 0) ? numOfRounds : 11;
-    //alert('Good Luck!')
-    //let currRound=0
-    	
+        	
 	// Function to roll the dice patterned from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
 	function rollTheDice() {
 		setTimeout(function () {
@@ -133,8 +129,13 @@
         }
     }
             currRound++
-            document.querySelector("h5").innerHTML = "Winning combination" + " "+"Round"+" "+(currRound)+ " "+"with" + " "+ (highestRoll)
+            document.querySelector("h5").innerHTML = "Winning combination" + " "+"Round"+" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + "with" + " "+ (highestRoll)
             
+            })
+            if (currRound == numRounds) {
+                alert("That's all the rounds you wanted to play! Game over!");
+            }
+
 			if (randomNumber1 === randomNumber2) {
 				document.querySelector("h4").innerHTML = "Draw!";
 			}
@@ -149,9 +150,11 @@
 								= player1 + (" Wins the round!");
 			}
     
-		})
-    }
+		}
+       
     
+        
+
 
     
     
