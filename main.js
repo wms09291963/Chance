@@ -14,11 +14,11 @@
     let randomNumber8
     let randomNumber9
     let randomNumber10
-    let bet_1
-    let bet_2
-    let bet_3
-    let bet_4
-    let bet_5
+    var bet_1 = "Bet 1";
+    var bet_2 = "Bet 2";
+    var bet_3 = "Bet 3";
+    var bet_4 = "Bet 4";
+    var bet_5 = "Bet 5";
     let wallet_1
     let wallet_2
     let wallet_3
@@ -40,8 +40,7 @@
     let numOfRounds = prompt('How many rounds should we play?',11);
     let numRounds = (numOfRounds !=0) ? numOfRounds : 11;
     
-
-    
+   
 // Function to change the player name - patterned after code from 
 //https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
     
@@ -62,17 +61,17 @@
 
 // Players place your bets! 
     function placeBets() {
-		bet_1 = prompt("player1"+" "+ "What's your bet?").innerHTML=bet_1;
-		bet_2 = prompt("player2"+" "+ "What's your bet?").innerHTML=bet_2;
-        bet_3 = prompt("player3"+" "+ "What's your bet?").innerHTML=bet_3;
-        bet_4 = prompt("player4"+" "+ "What's your bet?").innerHTML=bet_4;
-        bet_5 = prompt("player5"+" "+ "What's your bet?").innerHTML=bet_5;
+		bet_1 = prompt(player1+" "+ "What's your bet?");
+		bet_2 = prompt(player2+" "+ "What's your bet?");
+        bet_3 = prompt(player3+" "+ "What's your bet?");
+        bet_4 = prompt(player4+" "+ "What's your bet?");
+        bet_5 = prompt(player5+" "+ "What's your bet?");
 
-		document.querySelector("b.bet_1").innerHTML = bet_1;
-		document.querySelector("b.bet_2").innerHTML = bet_2;
-        document.querySelector("b.bet_3").innerHTML = bet_3;
-        document.querySelector("b.bet_4").innerHTML = bet_4;
-        document.querySelector("b.bet_5").innerHTML = bet_5;
+		document.querySelector((player1)+ "Round"(currRound)("p.Bet_1")).innerHTML = bet_1;
+		document.querySelector("p.Bet_2").innerHTML = bet_2;
+        document.querySelector("p.Bet_3").innerHTML = bet_3;
+        document.querySelector("p.Bet_4").innerHTML = bet_4;
+        document.querySelector("p.Bet_5").innerHTML = bet_5;
 	}
         	
 	// Function to roll the dice patterned from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
