@@ -29,6 +29,7 @@
     let roll_3
     let roll_4
     let roll_5
+    let totalPot
     let getLargestNumber
     let currRound =0
 
@@ -72,6 +73,8 @@
         document.querySelector("p.Bet_3").innerHTML = bet_3;
         document.querySelector("p.Bet_4").innerHTML = bet_4;
         document.querySelector("p.Bet_5").innerHTML = bet_5;
+
+        totalPot=bet_1+bet_2+bet_3+bet_4+bet_5
 	}
         	
 	// Function to roll the dice patterned from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
@@ -128,8 +131,8 @@
         }
     }
             currRound++
-            document.querySelector("h5").innerHTML = "Winning combination" + " "+"Round"+" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + "with" + " "+ (highestRoll)
-            
+            document.querySelector("h5").innerHTML = "Winning combination" + " "+"Round"+" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with" + " "+ (highestRoll)
+            document.querySelector("h6").innerHTML = "Total Pot for Round" + " "+(currRound)+" "+(totalPot)
             })
             if (currRound == numRounds) {
                 alert("That's all the rounds you wanted to play! Game over!");

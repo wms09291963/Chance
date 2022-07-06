@@ -60,6 +60,17 @@
 
     }
 
+    h6 {
+		background: #4ecca3;
+		font-family: "Indie Flower", cursive;
+		border-radius: 7px;
+		color: #ffff;
+		font-size: 30px;
+		padding: 16px 25px 16px 25px;
+		text-decoration: none;
+
+    }
+
 
 	p {
 		font-size: 1.1rem;
