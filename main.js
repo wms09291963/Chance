@@ -21,6 +21,8 @@
     var bet_5 = "Bet 5";
     let startWal_1=1000
     let startWal_2=1000
+    let currWall_1=1000
+    let currWall_2=1000
     let wallet_3
     let wallet_4
     let wallet_5
@@ -31,23 +33,34 @@
     let roll_5
     let totalPot
     let getLargestNumber
-    let currRound =1
+    let currRound =0
+    let numOfRounds
+    let numRounds
+    
 
     
 //Players determine number of rounds they want to play. 
 //Patterned after stackoverflow at the below link:
 // https://stackoverflow.com/questions/61625548/i-have-a-counter-to-track-the-number-or-rounds-but-i-cannot-figure-out-how-to-e
     
-    let numOfRounds = prompt('How many rounds should we play?',11);
-    let numRounds = (numOfRounds !=0) ? numOfRounds : 11;
-    
-   
+   // let numOfRounds = prompt('How many rounds should we play?',11);
+  //  let numRounds = (numOfRounds !=0) ? numOfRounds : 11;
+
+    //Function to begin play determines # of rounds in the game. 
+    function beginPlay () {
+        //window.location.reload()
+        numOfRounds = prompt('How many rounds should we play?',7);
+        numRounds = (numOfRounds !=0) ? numOfRounds : 7;
+        document.querySelector("h5").innerHTML = "Total Rounds to play is"+" " + numRounds;
+        
+    }
+
 // Function to change the player name - patterned after code from 
 //https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
     
 	function editNames() {
-		player1 = prompt("Change Player1 name");
-		player2 = prompt("Change player2 name");
+		player1 = prompt("What's Player 1's name?");
+		player2 = prompt("What's Player 2's name?");
         //player3 = prompt("Change Player3 name");
         //player4 = prompt("Change Player4 name");
         //player5 = prompt("Change Player5 name");
@@ -68,21 +81,26 @@
         //bet_4 = prompt(player4+" "+ "What's your bet?");
         //bet_5 = prompt(player5+" "+ "What's your bet?");
 
-		document.querySelector("p.Bet_1").innerHTML = bet_1;
-		document.querySelector("p.Bet_2").innerHTML = bet_2;
+		document.querySelector("p.Bet_1").innerHTML = player1 + "'s" + " " + "bet is" + " " + "$" + parseInt(bet_1);
+		document.querySelector("p.Bet_2").innerHTML = player2 + "'s" + " " + "bet is" + " " + "$" + parseInt(bet_2);
+        document.querySelector("p.startWal_1").innerHTML = player1 + "'s" + " " + "wallet is" + " " + "$" + (currWall_1 - parseInt(bet_1));
+        document.querySelector("p.startWal_2").innerHTML = player2 + "'s" + " " + "wallet is" + " " + "$" + (currWall_2 - parseInt(bet_2));
         //document.querySelector("p.Bet_3").innerHTML = bet_3;
         //document.querySelector("p.Bet_4").innerHTML = bet_4;
         //document.querySelector("p.Bet_5").innerHTML = bet_5;
-
+        //document.querySelector("p.Bet_1").innerHTML = player1 + "'s" + " " + "bet is" + " " + parseInt(bet_1);
+        currWall_1=startWal_1-parseInt(bet_1)
+        currWall_2=startWal_2-parseInt(bet_2)
         
 
         totalPot = parseInt(bet_1) + parseInt(bet_2);
-        document.querySelector("h6").innerHTML = "Total Pot for Round" + " "+(currRound)+" "+ "is" + " " + (totalPot)
+        document.querySelector("h6").innerHTML = "Total Pot for Round" + " " + currRound + " " + "is" + " " + "$"+(totalPot)
         
 	}
         	
 	// Function to roll the dice patterned from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
 	function rollTheDice() {
+        currRound++
 		setTimeout(function () {
 			var randomNumber1 = Math.floor(Math.random() * 6) + 1;
 			var randomNumber2 = Math.floor(Math.random() * 6) + 1;
@@ -103,7 +121,7 @@
             roll_5 = randomNumber5+randomNumber10
 
             // adds the bets to get the total pot for the round. 
-            totalPot = parseInt(bet_1) + parseInt(bet_2)
+            //totalPot = parseInt(bet_1) + parseInt(bet_2)
              
             const img1 = document.querySelector('.img1')
             const img2 = document.querySelector('.img2')
@@ -127,48 +145,48 @@ if (img2) {
     img2.setAttribute("src","dice" + randomNumber2 +".png");
 }
 
-    if (img3) { 
+if (img3) { 
         
      img3.setAttribute("src","dice" + randomNumber3 +".png");
 }
 
-    if (img4) {   
+if (img4) {   
 
         img4.setAttribute("src", "dice" + randomNumber4 +".png");
 
 }
 
-    if (img5) {
+if (img5) {
 
         img5.setAttribute("src", "dice" + randomNumber5 +".png");
 
     }
 
-    if (img6) {
+if (img6) {
 
         img6.setAttribute("src", "dice" + randomNumber6 +".png");
 
     }
 
-    if (img7) {
+if (img7) {
 
         img7.setAttribute("src", "dice" + randomNumber7 +".png");
 
     }
 
-    if (img8) {
+if (img8) {
 
         img8.setAttribute("src", "dice" + randomNumber8 +".png");
 
     }
 
-    if (img9) {
+if (img9) {
 
         img9.setAttribute("src", "dice" + randomNumber9 +".png");
 
     }
 
-    if (img10) {
+if (img10) {
 
         img10.setAttribute("src", "dice" + randomNumber10 +".png");
 
@@ -177,35 +195,37 @@ if (img2) {
     
   //For Loop returns highest roll - from PPT Slide js-2-Loops
   let results = [roll_1, roll_2,]
-    let highestRoll=0
-
+  let highestRoll=0
         for (let i=0; i<results.length; i++){
         if (results[i]>highestRoll){
             highestRoll = results[i]
                
         }
+
         if (roll_1==roll_2) {
         document.querySelector("h5").innerHTML = "Tie for" + " "+"Round"+" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with a" + " "+ (highestRoll)+" "+"roll again!"
+        
         }
         else if (roll_2 < roll_1) {
-        document.querySelector("h5").innerHTML = player1 + " "+ "wins Round" +" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with a" + " "+ (highestRoll)
-        startWal_1= parseInt(startWal_1) + parseInt(bet_1)
-        document.querySelector("p.startWal_1").innerHTML = "Wallet" + "=" + parseInt(startWal_1)
+        document.querySelector("h5").innerHTML = player1 + " "+ "wins Round" +" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with a" + " "+ (roll_1)
+        document.querySelector("p.startWal_1").innerHTML = "Wallet" + "=" + ((currWall_1) + parseInt(totalPot))
+        
         }
         else if (roll_2 > roll_1) {
-        document.querySelector("h5").innerHTML = player2 + " " + "wins Round" +" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with a" + " "+ (highestRoll)
-        startWal_2= parseInt (startWal_2) + parseInt (bet_1)
-        document.querySelector("p.startWal_1").innerHTML = "Wallet" + parseInt(startWal_1)
-            }
-
-            currRound++
-    }
-})
-            
-          
-    //document.querySelector("h5").innerHTML = "Winning combination" + " "+"Round"+" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with" + " "+ (highestRoll)
+        document.querySelector("h5").innerHTML = player2 + " " + "wins Round" +" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with a" + " "+ (roll_2)
+        document.querySelector("p.startWal_2").innerHTML = "Wallet" + "=" + ((currWall_2) + parseInt(totalPot))
+        
         
             }
+
+            
+    }
+    
+})
+            
+        
+            }
+            
             if (currRound == numRounds) {
                 alert("That's all the rounds you wanted to play! Game over!");
             }
