@@ -12,30 +12,25 @@
 <body>
     <h1>Will's Game of Chance</h1>
     <img src="./Assets/dice.jpg" alt="A pair of dice."style="width:250px; height:200px">
-    <h2>From 1 to 5 Players</h2>
-    <!--this code adds the pot of money image with size/-->
-
+    <h2>For 2 Players</h2>
+    
     <p>
-        Tired of the House winning all the time? Will's Game of Chance (from 1 to 5 Players)
-        is truly a game of chance with no favoritism for the House. Each Player starts with a wallet of $1,000. Players place bets which are then reflected in the pot, 
+        Tired of the House winning all the time? Will's Game of Chance (for 2 Players)
+        is truly a game of chance with no favoritism. Each Player starts with a wallet of $1,000. Players choose the number of rounds they wish to play, place bets for each round, and  simultaneously roll a pair of dice. 
+        The player with the highest roll wins the round. The player with the most winnings at the end of the designated number of rounds wins the game. 
         and sumulteneously roll a pair of dice. Whoever has the highest combination of numbers wins the round. In the event of a tie the pot is split between the winners.
-        Whoever wins (has the most in their wallet) at the end of 5 rounds wins.
-        If 1 Player only will play against the House.
-        Each Player starts with $1,000 in their wallet (including the House).
-        Each Player places bet. If House is playing a random number generated between 1 and the total of their wallet for house bet. 
-        Each Player Rolls the dice [produces Random number between 2 and 12]. 
+
     </p>
 
     <br>
+
     <div class="container">
-        <h2>Let's Play</h2>
-  
         <div class="dice">
             <p class="Player1">Player 1</p>
             <img class="img1" src="./assets/die.jpg">
             <img class="img6" src="./assets/die.jpg.">
             <img class="img11" src="./assets/wallet.jpg">
-            <p class="startWal_1">Starting wallet=$1,000.00</p>
+            <p class="startWal_1">Wallet=$1,000.00</p>
             <p class="Bet_1">Opening bet = 0</p>
 
         </div>
@@ -45,11 +40,12 @@
             <img class="img2" src="./assets/die.jpg">
             <img class="img7" src="./assets/die.jpg.">
             <img class="img12" src="./assets/wallet.jpg">
-            <p class="startWal_2">Starting wallet=$1,000.00</p>
+            <p class="startWal_2">Wallet=$1,000.00</p>
             <p class="Bet_2">Opening bet = 0</p>
 
         </div>
-
+        
+    <!--
         <div class="dice">
             <p class="Player3">Player 3</p>
             <img class="img3" src="./assets/die.jpg.">
@@ -68,9 +64,9 @@
             <p class="startWal_4">Starting wallet=$1,000.00</p>
             <p class="Bet_4">Opening bet = 0</p>
             
-
+        
         </div>
-
+    
         <div class="dice">
             <p class="Player5">Player 5</p>
             <img class="img5" src="./assets/die.jpg">
@@ -78,11 +74,13 @@
             <img class="img15" src="./assets/wallet.jpg">
             <p class="startWal_1">Starting wallet=$1,000.00</p>
             <p class="Bet_5">Opening bet = 0</p>
-        
-    <img src="./Assets/pot_of_money.jpg" alt="A pot of money."style="width:250px; height:200px">
-    <h6> Total Pot for round (totalPot) <h6>
+        -->
+    <!--this code adds the pot of money image with size/-->
+        <img src="./Assets/pot_of_money.jpg" alt="A pot of money."style="width:250px; height:200px">
+    <h6> Pot <h6>
 
     </div>
+
     <div class="container bottom">
         <button type="button" class="butn"
             onClick="beginPlay()">
@@ -105,16 +103,16 @@
     <div class="container bottom">
             <button type="button" class="butn" 
                 onClick="placeBets()">
-                "Place Bets for Round"
+                Place Bets for Round
             </button>
     <br>
 
         <h5>Round Number</h5>
         
-    
-     <h4>Let's Roll!</h4>
+ 
+     
   
     </div>
     
 </body>
-</html>
+</html

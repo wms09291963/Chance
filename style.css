@@ -1,18 +1,19 @@
-	.container {
+	.dice.container {
+        display:inline-block;
 		width: 70%;
 		margin: auto;
 		text-align: center;
 	}
 
-	.dice {
+	/*.dice {
 		text-align: left;
 		display: inline-block;
 		margin: 4px;
 	}
-
+*/
 	body {
 		background-color: #042f4b;
-		margin: 0;
+		margin: 5px;
 	}
 
 	h1 {
@@ -79,7 +80,7 @@
 	}
 
 	img {
-		width: 80%;
+		width: 50%;
 	}
 
 	.bottom {
@@ -106,144 +107,7 @@
             
       }
       
-    
-    /*This next set of code styles the Players' names (learned from class).*/
-    #Player_House {
-        display:inline-block;
-        background-color: pink;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-        
-      }
-    
-    #Player_1 {
-        display:inline-block;
-        background-color: pink;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-    
-      }
-    
-    #Player_2 {
-            display:inline-block;
-            background-color: pink;
-            border: 2px solid gold;
-            color:black;
-            margin: 20px;
-            padding: 20px;
-            font-weight: bold;
-            
-      }
-        
-    #Player_3 {
-        display:inline-block;
-        background-color: pink;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-        
-      }
-    
-    #Player_4 {
-        display:inline-block;
-        background-color: pink;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-        
-      }
-    
-    #Player_5 {
-        display:inline-block;
-        background-color: pink;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-        
-      }
-    
-    /*This next set of code styles the Players' wallet (learned from class).*/
-    
-    #Wallet_House {
-        display:inline-block;
-        background-color: brown;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-        
-      }
-    
-      #Wallet_1 {
-        display:inline-block;
-        background-color: brown;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-    
-      }
-    
-     #Wallet_2 {
-            display:inline-block;
-            background-color: brown;
-            border: 2px solid gold;
-            color:black;
-            margin: 20px;
-            padding: 20px;
-            font-weight: bold;
-            
-          }
-        
-           
-      #Wallet_3 {
-        display:inline-block;
-        background-color: brown;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-        
-      }
-    
-      #Wallet_4 {
-        display:inline-block;
-        background-color: brown;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-        
-      }
-      #Wallet_5 {
-        display:inline-block;
-        background-color: brown;
-        border: 2px solid gold;
-        color:black;
-        margin: 20px;
-        padding: 20px;
-        font-weight: bold;
-        
-      }
-    
-     
-      /* This code centers the dice image on the main page - from w3schools*/
+    /* This code centers the dice image on the main page - from w3schools*/
       img {
         display: inline-block;
         margin-left:auto;
@@ -274,31 +138,11 @@
         font-style: italic;
         font-size:45px
       }
-    
-    
-      body {
-        background-color:white(234, 218, 218)
-      }
       
       .container {
-        display:inline-block;
-        text-align: center;
+        display:inline-grid;
+        text-align: left;
         width: 200px;
         margin:auto;
       }
-      
-   
-      
-      /* Styling for Dropdown Button/*
-      /example from https://www.w3schools.com/howto/howto_js_dropdown.asp*/
     
-      
-      
-      
-      
-      
-      a {
-        opacity: .5;
-        text-decoration: none;
-        color: salmon;
-      }
