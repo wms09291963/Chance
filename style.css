@@ -1,16 +1,5 @@
-	.dice.container {
-        display:inline-block;
-		width: 70%;
-		margin: auto;
-		text-align: center;
-	}
 
-	/*.dice {
-		text-align: left;
-		display: inline-block;
-		margin: 4px;
-	}
-*/
+
 	body {
 		background-color: #042f4b;
 		margin: 5px;
@@ -53,9 +42,10 @@
     h5 {
 		background: #4ecca3;
 		font-family: "Indie Flower", cursive;
+        text-align: center;
 		border-radius: 7px;
 		color: #ffff;
-		font-size: 30px;
+		font-size: 15px;
 		padding: 16px 25px 16px 25px;
 		text-decoration: none;
 
@@ -66,7 +56,17 @@
 		font-family: "Indie Flower", cursive;
 		border-radius: 7px;
 		color: #ffff;
-		font-size: 30px;
+		font-size: 15px;
+		padding: 16px 25px 16px 25px;
+		text-decoration: none;
+       
+    }
+    h7 {
+		background: #4ecca3;
+		font-family: "Indie Flower", cursive;
+		border-radius: 7px;
+		color: #ffff;
+		font-size: 15px;
 		padding: 16px 25px 16px 25px;
 		text-decoration: none;
 
@@ -77,6 +77,9 @@
 		font-size: 1.1rem;
 		color: #4ecca3;
 		font-family: "Indie Flower", cursive;
+        text-align: left;
+        margin-left: 5px;
+        margin-right: 10px;
 	}
 
 	img {
@@ -92,8 +95,8 @@
 		font-family: "Indie Flower", cursive;
 		border-radius: 7px;
 		color: #ffff;
-		font-size: 30px;
-		padding: 16px 25px 16px 25px;
+		font-size: 14px;
+		padding: 15px 15px 15px 15px;
 		text-decoration: none;
 	}
 
@@ -108,26 +111,77 @@
       }
       
     /* This code centers the dice image on the main page - from w3schools*/
-      img {
+      img.class.img1 {
         display: inline-block;
         margin-left:auto;
         margin-right:auto;
-        width: 75%
+        width: 35%
       }
-    
-          
-      .dropbtn {
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
+
+      img.class.img2 {
         display: inline-block;
-        font-size: 16px;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
+      }
+
+      img.class.img3 {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
+      }
+
+      img.class.img4 {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
+      }
+
+      img.class.img5 {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
+      }
+
+      img.class.img6 {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
+      }
+
+      img.class.img7 {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
+      }
+
+      img.class.img8 {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
+      }
+
+      img.class.img9 {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
+      }
+
+      img.class.img10 {
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+        width: 40%
       }
       
-    
+         
       h1 {
         background-color: rgb(238, 189, 197);
         font-style: italic;
@@ -136,7 +190,7 @@
 
       h2 {
         font-style: italic;
-        font-size:45px
+        font-size:30px
       }
       
       .container {

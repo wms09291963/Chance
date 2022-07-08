@@ -36,6 +36,8 @@
     let currRound =0
     let numOfRounds
     let numRounds
+    let cumulWall_1=1000
+    let cumulWall_2=1000
     
 
     
@@ -83,8 +85,8 @@
 
 		document.querySelector("p.Bet_1").innerHTML = player1 + "'s" + " " + "bet is" + " " + "$" + parseInt(bet_1);
 		document.querySelector("p.Bet_2").innerHTML = player2 + "'s" + " " + "bet is" + " " + "$" + parseInt(bet_2);
-        document.querySelector("p.startWal_1").innerHTML = player1 + "'s" + " " + "wallet is" + " " + "$" + (currWall_1 - parseInt(bet_1));
-        document.querySelector("p.startWal_2").innerHTML = player2 + "'s" + " " + "wallet is" + " " + "$" + (currWall_2 - parseInt(bet_2));
+        document.querySelector("p.currWall_1").innerHTML = player1 + "'s" + " " + "wallet is" + " " + "$" + (cumulWall_1 - parseInt(bet_1));
+        document.querySelector("p.currWall_2").innerHTML = player2 + "'s" + " " + "wallet is" + " " + "$" + (cumulWall_2 - parseInt(bet_2));
         //document.querySelector("p.Bet_3").innerHTML = bet_3;
         //document.querySelector("p.Bet_4").innerHTML = bet_4;
         //document.querySelector("p.Bet_5").innerHTML = bet_5;
@@ -92,14 +94,19 @@
         currWall_1=startWal_1-parseInt(bet_1)
         currWall_2=startWal_2-parseInt(bet_2)
         
-
         totalPot = parseInt(bet_1) + parseInt(bet_2);
-        document.querySelector("h6").innerHTML = "Total Pot for Round" + " " + currRound + " " + "is" + " " + "$"+(totalPot)
+        document.querySelector("h6").innerHTML = "Total Pot for the Round" + " " + "is" + " " + "$"+(totalPot)
         
 	}
         	
 	// Function to roll the dice patterned from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
 	function rollTheDice() {
+        //if (currRound == numRounds) {
+         //   querySelector
+
+      //  {
+         //   alert("That's all the rounds you wanted to play! Game over!");
+       // }
         currRound++
 		setTimeout(function () {
 			var randomNumber1 = Math.floor(Math.random() * 6) + 1;
@@ -208,14 +215,19 @@ if (img10) {
         }
         else if (roll_2 < roll_1) {
         document.querySelector("h5").innerHTML = player1 + " "+ "wins Round" +" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with a" + " "+ (roll_1)
-        document.querySelector("p.startWal_1").innerHTML = "Wallet" + "=" + ((currWall_1) + parseInt(totalPot))
+        document.querySelector("p.currWall_1").innerHTML = "Wallet" + "=" + ((currWall_1) + parseInt(totalPot))
+        document.querySelector("p.currWall_2").innerHTML = "Wallet" + "=" + ((currWall_2) - parseInt(bet_2))
+        cumulWall_1=(currWall_1+parseInt(totalPot))
+        cumulWall_2=currWall_2
         
         }
         else if (roll_2 > roll_1) {
         document.querySelector("h5").innerHTML = player2 + " " + "wins Round" +" "+(currRound)+ " "+"of"+ " " + " "+ numOfRounds + " " + "with a" + " "+ (roll_2)
-        document.querySelector("p.startWal_2").innerHTML = "Wallet" + "=" + ((currWall_2) + parseInt(totalPot))
-        
-        
+        document.querySelector("p.currWall_2").innerHTML = "Wallet" + "=" + ((currWall_2) + parseInt(totalPot))
+        document.querySelector("p.currWall_1").innerHTML = "Wallet" + "=" + ((currWall_1) - parseInt(bet_2))
+        cumulWall_2=currWall_2+parseInt(totalPot)
+        cumulWall_1=currWall_1
+                
             }
 
             
@@ -225,27 +237,9 @@ if (img10) {
             
         
             }
+        
+    
             
-            if (currRound == numRounds) {
-                alert("That's all the rounds you wanted to play! Game over!");
-            }
-        
-
-			
-
-
-			
-
-			
-	
-    
-		
-       
-    
-        
-
 
     
-    
-
     
