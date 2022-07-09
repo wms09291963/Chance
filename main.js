@@ -45,7 +45,7 @@
     
 
 //Function to begin play determines player names and # of rounds in the game. 
-//Function to change the player name - patterned after code from 
+//patterned after code from 
 //https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
    
       function editNames() {
@@ -61,16 +61,13 @@
 		document.querySelector("p.Player2").innerHTML = player2;
         numOfRounds = prompt('How many rounds should we play?',7);
         numRounds = (numOfRounds !=0) ? numOfRounds : 7;
-        document.querySelector("h5").innerHTML = "Total Rounds to play is"+" " + numRounds;
-        
-             
+        document.querySelector("h5").innerHTML = "Total Rounds to play is"+" " + numRounds; 
+          
     }
-
-       	  
-// Function to change the player name - patterned after code from 
-//https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
-    
+ 	      
 // Players place your bets! 
+// patterned after code from 
+// https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
 
     function placeBets() {
         currRound++
@@ -190,7 +187,7 @@ if (img10) {
 
     }
 	    
-  //For Loop returns highest roll - from PPT Slide js-2-Loops
+  //For Loop returns highest roll - from PPT Slide js-2-Loops - to be used mainly in the version for more than 2 players. 
   let results = [roll_1, roll_2,]
   let highestRoll=0
         for (let i=0; i<results.length; i++){
@@ -222,17 +219,11 @@ if (img10) {
    }
     
 })
+//Score tracking work in progress. 
 score_1 =[currRound, startWal_1, bet_1, currWall_1, cumulWall_1]
 score_2 =[currRound, startWal_2, bet_2, currWall_2, cumulWall_2]
    
 document.querySelector("h7").innerHTML=score_1
 
-}
-
-
-
-        
-            
-        
-    
+}    
     

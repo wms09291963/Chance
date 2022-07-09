@@ -31,3 +31,4 @@ Unfinished functionality/outststanding bugs:
 * Styling - Players currently get displyed vertically and are to be shown horizontally. Layout also is being adjusted for easier viewing. 
 * Special effects - sound of dice rolling, other effects still needs to be installed. 
 * Dice need to be placed/referenced in the assets folder - correct path adjusted. 
+* Style.css needs to be cleaned up. Currently contains sandbox code that is not used. 
