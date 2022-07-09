@@ -199,4 +199,12 @@
         width: 200px;
         margin:auto;
       }
+
+      main {
+        display:inline-grid;
+        text-align: left;
+        width: 200px;
+        margin:auto;
+      }
+
     

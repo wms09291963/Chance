@@ -1,43 +1,33 @@
-General Requirements
-This is a solo project!
-Just to clarify, you may do the same game as another student, but you may not work together
-This game is a culmination of everything we've already done in class
-This game must run's  in a web browser. 
-This game is tracked in GitHub, with a minimum on 10 commits.
-Ideally, put your empty project up on GitHub on day one of development and aim for multiple commits per day
-This game is deployed on GitHub Pages or another location
-Game Requirements
-This game can be designed for 2 or more players (PvP) or 1 player (PvE)
-The second player in a PvP game can be a person or an AI
-For multi-player games, turns should switch appropriately between players
-This game should be winnable or it should keep score (whichever makes more sense)
-When a player wins or loses, the game status and/or score should display visually to the player in a way that does not rely on console.logs or alerts
-If there is a valid draw (tie) condition in your chosen game, that should be implemented
-HTML, CSS, and JavaScript should live in separate file
-Effort must be spent on styling and appearance
-The HTML code should use sematic tags
-The game should have a Readme.md file in the GitHub repository that describes the inspiration for the game, explains the controls and how to play the game, lists the technologies used to build the game, and addresses any outstanding bugs or unfinished functionality
-Bonus Ideas
-Make persistent scores in your browser's localStorage
-Add interesting music or sound effects to your game
-Deliverables
+ Inspiration for the game:
 
-Inspiration for this game:
+I had the opportunity to live and work in Vegas for a few years. It was great fun! But one thing I soon learned was that most Casino games (slot machines etc.) favor the house, with the exception of a few. So, I wanted to create a game of chance between 2 or more players that truly is a game of chance, with no favoratism for the House. The game is designed to be completely random and illustrate the randomness of the outcomes. Dice outcomes get assigned completely random numbers. After multiple rounds have been played one should expect to see a completely random pattern of winners. 
 
-I had the opportunity to live and work in Vegas for a few years. It was great fun! But one thing I soon learned was that most Casino games are set up to favor the house, with the exception of a few. So, I wanted to create a game of chance that was truly a game of chance between all Players, with no favoratism for the House. Tired of being beat by the house? Hopefully this game will give you some overdue revenge by beating the House!
+How to play the game:
 
-Random Outcomes 
-The game is designed to be completely random and illustrate the randomness of the outcomes. After multiple rounds have been played one should expect to see a completely random pattern of winners. 
+Players get prompted for their names and choose the number of rounds they wish to play. Each player starts with a wallet of $1,000. Players place bets for each round of play. The bets get reflected in the pot. Players  simultaneousy roll a pair of dice, and the player with the highest roll for the round wins the round and the pot. In the event of a tie roll, the players roll again. The player with the most winnings at the end of the designated number of rounds wins the game. If a player goes broke before the designated number of rounds is met, then the game is over. 
 
-Goal of the game: 
+Game Controls: 
+1. Start New Game button - a new game is initiated by clicking this button. Players are then prompted for their names and the number of rounds they wish to play. 
 
-Players choose the number of rounds they wish to play ahead of time. The Player with the most winnings at the end of the specified number of rounds wins. 
+2. Place Bets for Round button - Players then click this button to be prompted for their bet for the round. The pot reflects the bets and players' wallets get adjusted. 
 
-How to play the game: 
+3. Roll the Dice - players then click this button to simultsneously roll a pair of dice. The player with the highest roll wins the round and the pot. In the event of a tie roll the players roll again. The players' wallets get  adjusted to reflect the outcome. Players then click on the "Place Bets for Round" button to begin the next round.
 
-Each Player starts with a wallet of $1,000 (including the House). 1 to 4 Players can play. If only one Player that Player play's against the House.    
-1. Players first agree on the number of rounds they wish to play (from 1 to 10 rounds). 
-2. Round 1 begins - all Players place their bets. The total of their bets are reflected in the pot and subtracted from their wallet. 
-3. Players simultaneously roll a pair of dice. Whoever has the highest combination wins the round and the pot of money. In the event of a tie, the pot is split. The pot gets added to the winner(s) wallet. 
-4. The next round begins. 
+Technologies used to build the game:
+please note links to references/sources of code below are  footnoted in the code comments.
+* HTML
+* Javascript
+* CSS
+* VS Code
+* Github
+* Chrome web browser
+* Google Search Engine 
 
+Unfinished functionality/outststanding bugs: 
+* Total score and winner tracker. 
+* Tracking bets from round to round (same as above).
+* Input parameters for bets (players must not be able to place bets for more than their current wallet). 
+* Start New Game Button - clear cache and values for new game. Currently the browser page must be refreshed to clear values of current game and start a new game. 
+* Styling - Players currently get displyed vertically and are to be shown horizontally. Layout also is being adjusted for easier viewing. 
+* Special effects - sound of dice rolling, other effects still needs to be installed. 
+* Dice need to be placed/referenced in the assets folder - correct path adjusted. 
